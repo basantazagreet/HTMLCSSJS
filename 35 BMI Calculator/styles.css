@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #72a5ca;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+
+.box{
+  background-color: #0f6a96;
+  margin: 20rem auto;
+  min-height: 20rem;
+  border-radius: 8px;;
+
+}
+
+.content{
+  max-width: 34rem;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.box h2{
+  color: #fff;
+  text-align: center;
+  font-size: 3rem;
+}
+
+
+.box .count{
+  color: #fff;
+  font-size: 2.5rem;
+  margin: 3rem auto;
+}
+
+
+
+label{
+  font-size: 2.3rem;
+  display: block;
+  color: white;
+  
+}
+
+input{
+  display: block;
+  height: 4rem;
+  margin: 0.5rem auto;
+  border-radius: 5px; 
+  font-size: 2.3rem; 
+  width: 100%;
+}
+
+.result{
+  font-size: 2.5rem;
+  padding: 1rem 1.5rem;
+  color: white;
+  font-weight: 500;
+  display: none;
+  background-color: red;
+  border-radius: 7px;
+}
+
+.btn{
+  display: block;
+  background-color: #db6400;
+  margin: 1rem auto;
+  width: 100%;
+  font-size: 2.3rem;
+  padding: 1rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.btn-reset{
+  display: block;
+  background-color: #9d0191;
+  margin: 1rem auto;
+  font-size: 2.3rem;
+  width: 100%;
+  padding: 1rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 7px;
+  display: none;
+}

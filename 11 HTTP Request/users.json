@@ -1,0 +1,25 @@
+[
+    {
+      "name": "Basanta Sapkota",
+      "email": "basantazagreet@gmail.com",
+      "password": "123@abc"
+    },
+    {
+      "id": 2,
+      "name": "Hemanta Sapkota",
+      "email": "hmnt.spk@gmail.com",
+      "password": "123@abc"
+    },
+    {
+      "name": "Diwas Kandel",
+      "email": "diwas.kandel@gmail.com",
+      "password": "diwas123",
+      "id": 3
+    },
+    {
+      "name": "Badri Sapkota",
+      "email": "badri.sapkota@gmail.com",
+      "password": "Badri123",
+      "id": 4
+    }
+  ]

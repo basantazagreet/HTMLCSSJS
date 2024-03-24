@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/1935d064dd.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="box">
+      <div class="inner-box">
+      <h2>Tip Calculator</h2>      
+      <div class="bill flex">
+        <label>Bill: </label>
+        <input type="text" id="bill" placeholder="$">
+      </div>  
+      <hr>
+      <div class="flex">
+        <label>Rate Service: </label>
+        <select class="rate">
+          <option value="0" disabled selected>Select an Option</option>
+          <option value="0.05">5% Fair</option>
+          <option value="0.1">10% Good</option>
+          <option value="0.15">15% Excellent</option>
+        </select>
+      </div>  
+      <span class="error">Please enter the bill amount and rate</span>
+      <hr>
+      <button>Calculate</button>
+      <hr>
+      <h4 id="tip">Tip:</h4>
+      <h4 id="total">Total bill:</h4>
+    </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

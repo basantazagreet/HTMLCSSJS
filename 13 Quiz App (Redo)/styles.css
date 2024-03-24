@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  width: 100vw;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center ;
+  justify-content: center;
+  height: 100vh;
+  background-color: #005490;
+}
+
+.quiz-box{
+  background-color: white;
+  border-radius: 15px;
+  padding:4rem 6rem;
+}
+
+
+.quiz-box h1{
+  font-size: 3.5rem;
+  color: white;
+  background-color: #9d0191;
+  padding: 2rem 4rem;
+  border-radius: 5px;
+}
+
+.quiz-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.quiz-header p{
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#countdown{
+  margin-left: auto;
+  background-color: red;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+}
+
+#question{
+  font-size: 2.5rem;
+  font-weight: 600;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  color: green;
+  padding: 0.7rem 1.5rem;
+}
+
+.btn{
+  display: block;
+  background-color: white;
+  color: #333;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #f2f2f2;
+  border: 1px solid #333;
+  border-radius: 4px;
+  transition: 0.3 all;
+  text-align: left;
+  margin: 2rem 0;
+}
+
+#take-again{
+  display: block;
+  background-color: #db6400;
+  color: #333;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  transition: 0.3 all;
+  text-align: center;
+  margin: 2rem auto;
+  color: white;
+  font-size: 2rem;
+}
+
+#take-again a{
+  text-decoration: none;
+}
+
+
+#take-again:hover{
+  background-color: #9d0191;
+}
+
+.btn:active{
+  color:#db6400;
+}
+
+.btn:hover{
+  background-color: #9d0191;
+}
+
+.buttons{
+  padding: 2rem 1rem;
+}
+
+#score{
+  margin: 0.5rem auto;
+}

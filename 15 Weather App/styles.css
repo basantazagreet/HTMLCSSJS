@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, red, blue);
+}
+
+.top{
+  background-image: url('./images/weather.png');
+  margin: 5rem auto;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  background-size: cover;
+  height: 65vh;
+  width: 40rem;
+}
+
+.element-container{
+  max-width: 25rem;
+  margin: 8rem auto;
+}
+
+.top h1{
+  color: white;
+  font-size: 3rem;
+}
+
+.top input{
+  display: block;
+  height: 30px;
+  width: 90%;
+  border-radius: 10px 0 10px 0 ;
+}
+
+.top button{
+  background-color: #db6400;
+  padding: 4px 10px;
+  margin: 5px auto;
+  width: 100%;
+  display: block;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.location{
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.city{
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+
+.current{
+  font-size: 1.5rem;
+  color: white;
+  line-height: 2.5rem;
+}
+
+.error{
+  color: red;
+  display: none;
+}
+
+.weather-icon{
+  width: 3rem;
+  height: 3rem;
+  display: none;
+}

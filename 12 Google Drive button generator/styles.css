@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.main-container {
+  display: flex;
+}
+
+.content {
+  display: none;
+}
+
+.instructions {
+  background-color: #333;
+  height: 100vh;
+  flex-basis: 25%;
+}
+
+.instructions .container h2 {
+  color: orange;
+  font-size: 3rem;
+  position: relative;
+}
+
+
+.line {
+  position: relative;
+  margin: 5px 0;
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 25%;
+  height: 2px;
+  background-color: #eee;
+}
+
+
+
+.instructions .container {
+  color: white;
+}
+
+
+.instructions .container a {
+  color: orange;
+  text-decoration: none;
+}
+
+.download-link .container {
+  margin: 15rem auto;
+}
+
+.download-link {
+  flex-basis: 73%;
+}
+
+.download-link .container h1 {
+  font-size: 3rem;
+  color: purple;
+  text-align: center;
+}
+
+.download-link .container nav {
+  margin-top: 2.5rem;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #f2f2f2;
+  display: flex;
+}
+
+
+.download-link .container nav label{
+  padding: 1rem 3.5rem;
+}
+
+.download-link .container nav label i{
+  padding: 1rem;
+  color: orange;
+}
+
+.content{
+  border: 3px solid purple;
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+.content button{
+  display:block;
+  background-color: purple;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin:1rem auto;
+}
+
+.content span{
+  display: inline-block;
+  padding: 1rem;
+  background-color: purple;
+  color: white;
+}
+
+.content h2{
+  font-size: 1.8rem;
+
+}
+
+.content input[type="text"]{
+  width: 70%;
+  height: 2rem;
+}
+
+
+
+
+
+
+
+
+nav label{
+  cursor: pointer;
+}
+
+
+#login:checked ~ nav label.login, 
+#register:checked ~ nav label.register, 
+#reset:checked ~ nav label.reset 
+{
+    color: white;
+    background-color: purple;
+}
+
+
+#login:checked~section .content-link,
+#register:checked~section .content-audio,
+#reset:checked~section .content-video {
+  display: block;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+
+label:hover {
+  background-color: #f0f0f0; /* Change background color on hover */
+}
+
