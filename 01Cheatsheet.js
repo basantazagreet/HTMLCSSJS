@@ -761,10 +761,288 @@ if (scroll_height >= section_top_height) {
 }
 
 
+//56 Form validation
+
+el_form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    checkRequired([el_email, el_password, el_username, el_password2]);
+    checkLength(el_username,6,16);
+    checkLength(el_password,8,16);
+    checkEmail(el_email);
+    matchPassword(el_password,el_password2);
+});
+
+
+//aaru functions:
+
+{
+    showError(input, message);
+    showSuccess(input);
+    getFieldName(input);
+    checkEmail(input);//using regex
+}
+
+
+
+//57 Password visibility toggler:
+
+el_password.setAttribute('type', 'text');
+
+
+//58 Password strength check
+
+el_password.addEventListener('keyup', () => {
+    let pass = el_password.value;
+    checkStrength(pass);
+});
+
+{   
+    //Use regex to match them
+    //strength variable aanusar width and color of lines denoting strength
+    {
+        //Lowercase and Uppercase
+        //Number (0-9)
+        //Special character (!@#$%^&*)
+        //Atleast 8 character
+    }
+    addCheck(charRequired);
+    removeCheck(charRequired);
+    removePassStrength()
+}
+
+
+
+
+//59 Register and Login and Forgot slide down and slide up
+//Simple 3 stacked sections and display none and flex interchanged.
 
 
 
 
 
+//60 Animated Searchbar(Width and placeholder attribute)
+//Search icon click displays close icon and 
+//Increases the width of searchbar and placeholder attribute with timeout
+//Decreases the width of searchbar and placeholder attribute with timeout
 
 
+
+
+
+//61 Udemy avatar Menu (Hover garda pic ma dropdown aauni)
+//Menu absolute position to match the location
+
+//Menu mathi up arrow banauna 45 deg rotated square used
+//mouse out ra mouse over in avatar and menu to toggle active class
+//active class ma visibility and opacity set
+
+
+
+
+//62 Currency converter using API
+
+//flag and COuntry code ko object banauni
+//cur1 and cur2 for flag and country code
+//Inputboxes for amount
+//Rotate button to exchange positions
+{
+    async function getExchangeRate(){}//on input change ma call
+    function getFlag(){}
+}
+
+
+//63 Movie Listing app
+//Movies API and new div += movie and appended to a parent div
+
+{
+    async function getMovies(url){}
+    function displayMovies(movies){}
+}
+
+
+//64 Floating action button
+
+//FAB absolutely positioned at buttom right and all icons stacked
+//Show class toggled and bottom property of each buttons changed for visibility
+
+/*
+    .fab-btns.show .fab-btn:nth-child(1){
+        bottom: 8rem;
+        background: #3b5999;
+      }
+*/
+
+
+
+//65 Dark mode toggler
+
+const enableDarkMode = () => {
+    document.body.classList.add('darkmode');
+    el_toggleText.textContent = "Light";
+    localStorage.setItem('darkMode', 'enabled');
+}
+
+//css:
+//Variables for background and foreground switched
+/*
+:root{
+  --color-light: #eee;
+  --color-dark: #222831;
+  --color-orange: #db6400;
+
+  --background: var(--color-light);
+  --foreground: var(--color-dark);
+}
+
+body{
+  background: var(--background);
+  color: var(--foreground);
+
+}
+
+.darkmode{
+  --color-light: #eee;
+  --color-dark: #222831;
+  --color-orange: #db6400;
+
+  --background: var(--color-dark);
+  --foreground: var(--color-light);
+}
+
+.btn-primary{
+  background: var(--foreground);
+  color: var(--background);
+
+}
+*/
+
+
+
+//66 Speech to text
+
+const speechRecognition =
+  window.SpeechRecognition || window.webkitSpeechRecognition;
+  const recognition = new speechRecognition();
+
+  recognition.start();
+
+  recognition.addEventListener("result", (e) => {
+    console.log(e);
+    const current = e.resultIndex;
+    const transcript = e.results[current][0].transcript;
+    content += transcript;
+    searchInput.value = content;
+    searchInput.focus();
+  });
+
+
+
+//67 Speech to text and Google search
+{
+    recognition.addEventListener("result", (e) => {
+        console.log(e);
+        const current = e.resultIndex;
+        const transcript = e.results[current][0].transcript;
+        
+    
+        if(transcript.toLowerCase().trim() == "stop recording"){
+          recognition.stop();
+        } else if(!searchInput.value){
+          searchInput.value = transcript;
+        }else{
+          if(transcript.toLowerCase().trim() == "search"){
+            searchForm.submit();
+          }else if(transcript.toLowerCase().trim() == "reset form"){
+            searchInput.value = "";
+          }else{
+            searchInput.value = transcript;
+          }
+        }
+      });
+}
+
+
+//68 Text to speech project
+
+const speechSynthesis = window.speechSynthesis;
+
+function speak(e) {
+    e.preventDefault();
+    const inputValue = input.value;
+    const speech = new SpeechSynthesisUtterance();
+    speech.lang = "en-US";
+    speech.text = inputValue;
+    speech.volume = "1";
+    speech.rate = "1";
+    speech.pitch = "1";
+    speech.voice = speechSynthesis.speak(speech);
+  }
+
+
+//69 Typewriter effect
+
+//Cursor is an inline-block and blinks using animation,
+//Upon typing, blink animation is removed.
+
+//SetTimeout while calling these functions
+//Type garna:
+{
+    el_typedWord.textContent += wordArray[wordArrayIndex].charAt(letterIndex);
+        letterIndex++;
+        setTimeout(type,typingDelay);
+}
+
+//Index complete vaye initiate erase
+
+//erase if letterIndex>0
+{
+    el_typedWord.textContent = wordArray[wordArrayIndex].substring(0,letterIndex-1);
+        letterIndex--;
+        setTimeout(erase, erasingDelay);
+}
+
+//Type New word if letterIndex<=0
+{
+    wordArrayIndex++;
+        if(wordArrayIndex>=wordArray.length){
+            wordArrayIndex = 0;
+        }
+        setTimeout(type,typingDelay);
+} 
+
+//70 Simple Progress bar
+
+//Fill function ma width++ and check if width>100
+const interval = setInterval(fill,20);
+
+
+//71 Toast notification
+
+//alert popup absolutely positioned top right 
+//transform: translateX(110%); to hide it
+
+//.alert.show ma slide in animation . Motion is unique
+//.alert.hide ma slide out animation, Motion is unique
+
+
+//Exclamation, msg and close icon absolutely positioned
+
+//3 colors used, msg and icon lai euta, left border lai euta and 
+//background of alert box lai euta
+
+
+//Color haru different on different types of alert lai , Class used
+//Show and hide using classList
+//Msg passed using function parameter
+//color passed as constructor in Class
+
+//Progressbar from last lecture
+
+
+//72 Custom Confirmbox
+
+//Simple modal open and close by toggling class
+
+//Button event listener ma object created, class ma modal ma
+//hune sabai content text cha in constructor
+//trigger function le sabai set garcha ra vitra callback function called
