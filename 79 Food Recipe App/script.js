@@ -54,6 +54,7 @@ function displayMeals(meals) {
 
 async function getMealRecipe(e) {
     if (e.target.classList.contains('recipe-btn')) {
+      //div with class meal for dataset id
         let mealItem = e.target.parentElement.parentElement;
         const res = await fetch(`${LOOKUP_URL}${mealItem.dataset.id}`);
         const data = await res.json();

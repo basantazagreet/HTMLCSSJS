@@ -1046,3 +1046,254 @@ const interval = setInterval(fill,20);
 //Button event listener ma object created, class ma modal ma
 //hune sabai content text cha in constructor
 //trigger function le sabai set garcha ra vitra callback function called
+
+
+
+//73 Custom Range Slider
+//input type="range"
+
+{
+    el_rangeSlider.oninput = function () {
+        el_value.textContent = this.value;
+    };
+}
+
+
+//74 Modal with countdown
+
+//Modal, reverse counter and progressbar
+
+
+
+//75 Website preloader
+
+//Cursor blinking by inline block and <span class="cursor"></span>
+//typing animation when word is being typed or deleted
+
+
+
+//Variables used
+
+/*
+const wordArray = [ ];
+let wordArrayIndex ;
+let letterIndex ;
+
+const typingDelay
+const erasingDelay
+const newWordDelay
+*/
+
+//yehi variables ra timeout sanga khelne
+
+
+function type(){
+    el_typedWord.textContent += wordArray[wordArrayIndex].charAt(letterIndex);
+}
+
+function erase(){
+    el_typedWord.textContent = wordArray[wordArrayIndex].substring(0,letterIndex-1);
+
+}
+
+
+//76 Testimonial Slider
+//slide 1,2,3 stacked on top of each other
+//index euta repeating index var banauni ra display none haru
+
+function displaySlide(index){
+    el_slides.forEach(slide => {
+       slide.style.display = "none"; 
+    });
+    el_slides[index].style.display = "flex";
+}
+
+
+
+//77 Tweet character count
+//input event listener
+//direct tweet twitter API used
+
+const updateLimit = () => {
+    el_limit.textContent = max;
+    el_input.addEventListener("input" , ()=>{
+        let inputLength = el_input.value.length;
+        el_limit.textContent = max - inputLength;
+
+        if(inputLength>max){
+            el_btn.disabled = true;
+            el_limit.style.color = "red";
+        }else{
+            el_btn.disabled = false;
+            el_limit.style.color = "black";
+        }
+    });
+}
+
+
+//78 Embed twitter
+//Just html ma embedded
+/*
+<div class="container tweet">
+        <a class="twitter-timeline" href="https://twitter.com/basantazagreet?ref_src=twsrc%5Etfw" 
+        data-tweet-limit="5" data-width="300">Tweets by basantazagreet</a>
+         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+*/
+
+
+
+
+//79 Food Recipe app
+
+//API bata meals lyacha
+//search form cha on submit API call huncha
+//HTML ma forEach garera accumulate aani later display
+//Onclick ma modal aaucha with single meal through dataset id.
+
+
+
+
+
+//80) Product gallery with thumbnail
+
+//Images flex, click garda large image huncha forEach loop ma
+//left ra right arrow ma mousedown event ra, 
+//el_imgSmallDiv.scrollLeft += 10; with variables like val, timer etc
+
+
+
+//81)Image gallery filter
+
+// <span class="filter-gallery active" data-filter="all">All</span>
+/*<div class="image shoe">
+<img src="./images/shoe.jpg" alt="">
+</div>*/
+//Hover ma .gallery .image:hover::after{
+//content: "\f00e";
+
+//filter ma data-filter
+//image.classList.contains(filter) then display
+
+
+
+//82)Card Payment UI
+
+
+//no alphabets allowed
+//e.target.value = e.target.value
+//.replace(/[^\dA-Z]/g, "")
+//.replace(/[^\da-z]/g, "")
+
+//1 space after 4 chars in card number
+//.replace(/(.{4})/g, "$1 ")
+
+//1 Forward slash after 2 char in MM/YY
+//.replace(/(.{2})/g, "$1/")
+
+
+
+
+//83) Exact Age calculator
+
+//Today bata ghatayera banayeko 
+//Handles cases like Today's Month < Birth Month
+//Today's Day < Birth Day
+
+
+
+//84) Multi step form
+
+
+//let currentFormItem = 0;  (Circular pattern ma)
+//el_formItems[currentFormItem].style.display = "block";0
+//Next Next Next aani submit
+//1234 ma color on progress
+
+
+//85) Pricing section
+
+//Slider round label vitra
+//::before vitra ko golo
+/*
+input:checked + .slider::before{
+    transform: translateX(26px);
+  }
+*/  
+
+
+
+
+//86) Stopwatch
+//10 ms ko timer cha
+
+/*
+ milliseconds += 10;
+    if (milliseconds == 1000) {
+        milliseconds = 0;
+        seconds++;
+        if (seconds == 60) {
+            seconds =0;
+            minutes++;
+            if(minutes == 60){
+                minutes = 0;
+                hours++;
+            }
+        }
+    }
+
+*/
+  
+
+//87) Vertical Timeline
+
+//ul li div
+
+//li is vertical line
+//Triangle (arrow) Odd ma right ra even ma left
+//load, scroll and resize ma function call
+/*
+if(isElementInViewport(items[i])){
+                items[i].classList.add("slide-in");
+            }else{
+                items[i].classList.remove("slide-in");
+            }
+*/
+
+//Is element in viewport
+
+/*
+function isElementInViewport(el){
+        let rect = el.getBoundingClientRect();
+
+        return(
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.
+                documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.
+            documentElement.clientWidth)
+
+        );
+    }
+*/
+
+
+//88) Music Player app
+
+//Tracklist array of object with src, img, artist and track name
+
+//Index track variable for track loop
+
+//Load track function based on index
+//Play, pause song
+//nextSong, prevSong
+//Mute sound ( track.volume = 0;)
+//changeVolume, changeDuration
+//autoPlay toggle
+//resetSlider
+//updateSlider
+//songTImeUpdate
+//Show and Hide playlist
+//displayTracks
+//playFromPlaylist
